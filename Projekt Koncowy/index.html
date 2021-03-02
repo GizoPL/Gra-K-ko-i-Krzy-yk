@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+  <link rel="stylesheet"
+        href="css/style.css">
+  <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+  <title>Kółko i krzyżyk</title>
+</head>
+
+<body>
+  <main>
+    <div class="first-panel">
+      
+      <header>
+        <h1><span id="O"> Kółko </span> <span id="and"> & </span> <span id="X"> Krzyżyk </span></h1>
+        <div class="help-container">
+          <a  href="#"
+             id="instructions">Zasady</a>
+        </div>
+      </header>
+
+
+      <div id="settings" class="controls players">
+        <label class="name">
+          <span class="p1">First Player</span>    
+            <input type="text" id="player1-name" class="name" placeholder="Wprowadź nazwę gracza!">  
+        </label>
+
+        <label class="name">
+          <span class="p2">Second Player</span>
+          <input type="text" id="player2-name" class="name" placeholder="Wprowadź nazwę gracza!">        
+        </label>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <section id="board"></section>
+
+    <aside id="controls" class="controls">
+           <div id="score-table">
+             Tablica wyników
+            <p class="score">
+              <span id="player1-score">0</span> <span id="player-score">:</span> <span id="player2-score">0</span>
+            </p>
+          </div>
+
+      <div class="current">
+        <p id="result">Kolej na ruch zawodnika: </p>
+        <p id="current">First Player</p>
+      </div>
+
+    </aside>
+    
+  </main>
+
+  <div id="reset-popup"
+       class="popup">
+    <p>Game Over!</p>
+    <button id="newgame-btn">Nowa gra</button>
+    <button id="dismiss-btn">Zamknij</button>
+  </div>
+
+  <div id="help-popup"
+       class="popup">
+    <h3><span id><span id="Span1">Zasady gry w</span> <span id="SpanO">Kółko</span> <span id="SpanAND">&</span> <span id="SpanX">Krzyżyk<samp></h3>
+    <ul class="dots">
+      <li>Zawodnicy zaznaczają pola na planszy</li>
+      <li>Wygrywa zawodnik, który jako pierwszy zaznaczy 5 sąsiadujących pól</li>
+    </ul>
+    <button id="dismiss-help">Zamknij</button>
+  </div>
+
+  <script src="js/game.js"
+          charset="utf-8"></script>
+  <script src="js/ui.js"
+          charset="utf-8"></script>
+</body>
+
+</html>
